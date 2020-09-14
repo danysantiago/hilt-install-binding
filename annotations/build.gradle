@@ -1,0 +1,8 @@
+plugins {
+    id 'java'
+}
+
+dependencies {
+    implementation 'com.google.dagger:hilt-core:2.29.1-alpha'
+    annotationProcessor 'com.google.dagger:hilt-compiler:2.29.1-alpha'
+}

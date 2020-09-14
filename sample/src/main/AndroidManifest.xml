@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="dany.hilt.sample">
+
+    <application
+        android:name=".SampleApp"
+        android:allowBackup="false"
+        android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+</manifest>
