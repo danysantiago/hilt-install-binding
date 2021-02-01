@@ -6,3 +6,6 @@ Example usage:
 @InstallBinding(SingletonComponent::class)
 class AuthenticatorImpl @Inject constructor(): Authenticator
 ```
+
+## Disclaimer
+This is **not** an official Google product.
