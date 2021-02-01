@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 Google, LLC.
+ * Copyright ${YEAR} Google, LLC.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,21 +13,3 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
-package dany.hilt;
-
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
-
-import dagger.hilt.GeneratesRootInput;
-
-@Retention(RetentionPolicy.CLASS)
-@Target(ElementType.TYPE)
-@GeneratesRootInput
-public @interface InstallBinding {
-    Class<?> component();
-
-    Class<?> boundType() default Object.class;
-}

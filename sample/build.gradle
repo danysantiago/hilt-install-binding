@@ -7,7 +7,7 @@ plugins {
 
 android {
     compileSdkVersion 30
-    buildToolsVersion "30.0.1"
+    buildToolsVersion "30.0.2"
 
     defaultConfig {
         minSdkVersion 23
@@ -16,7 +16,6 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -30,6 +29,7 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
         jvmTarget = '1.8'
     }
@@ -39,8 +39,8 @@ dependencies {
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'com.google.dagger:hilt-android:2.29.1-alpha'
-    kapt 'com.google.dagger:hilt-compiler:2.29.1-alpha'
+    implementation 'com.google.dagger:hilt-android:2.31.2-alpha'
+    kapt 'com.google.dagger:hilt-compiler:2.31.2-alpha'
     implementation project(':annotations')
     kapt project(':compiler')
 
