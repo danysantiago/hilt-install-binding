@@ -36,13 +36,13 @@ android {
 }
 
 dependencies {
-    implementation("androidx.appcompat:appcompat:1.2.0")
-    implementation("com.google.dagger:hilt-android:2.31.2-alpha")
-    kapt("com.google.dagger:hilt-compiler:2.31.2-alpha")
-    implementation(project(":annotations"))
-    kapt(project(":compiler"))
+    implementation(libs.androidx.appCompat)
+    implementation(libs.dagger.hilt.android)
+    kapt(libs.dagger.hilt.compiler)
+    implementation(projects.annotations)
+    kapt(projects.compiler)
 
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("com.android.support.test:runner:1.0.2")
-    androidTestImplementation("com.android.support.test.espresso:espresso-core:3.0.2")
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.android.support.test.runner)
+    androidTestImplementation(libs.android.support.test.espresso.core)
 }

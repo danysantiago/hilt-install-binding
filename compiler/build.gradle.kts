@@ -17,12 +17,16 @@
 plugins {
     id("kotlin")
     id("kotlin-kapt")
+    publish
 }
 
+group = checkNotNull(properties["libGroup"]?.toString())
+version = checkNotNull(properties["libVersion"]?.toString())
+
 dependencies {
-    implementation("com.squareup:javapoet:1.13.0")
-    compileOnly("com.google.auto.service:auto-service-annotations:1.0-rc7")
-    kapt("com.google.auto.service:auto-service:1.0-rc7")
-    compileOnly("net.ltgt.gradle.incap:incap:0.2")
-    kapt("net.ltgt.gradle.incap:incap-processor:0.2")
+    implementation(libs.javapoet)
+    compileOnly(libs.auto.service.annotations)
+    kapt(libs.auto.service.compiler)
+    compileOnly(libs.incap.core)
+    kapt(libs.incap.compiler)
 }

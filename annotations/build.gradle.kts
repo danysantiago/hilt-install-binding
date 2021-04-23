@@ -16,11 +16,15 @@
 
 plugins {
     id("java")
+    publish
 }
 
+group = checkNotNull(properties["libGroup"]?.toString())
+version = checkNotNull(properties["libVersion"]?.toString())
+
 dependencies {
-    implementation("com.google.dagger:hilt-core:2.31.2-alpha")
-    annotationProcessor("com.google.dagger:hilt-compiler:2.31.2-alpha")
+    implementation(libs.dagger.hilt.core)
+    annotationProcessor(libs.dagger.hilt.compiler)
 }
 
 java {
