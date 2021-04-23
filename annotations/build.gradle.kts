@@ -15,10 +15,15 @@
  */
 
 plugins {
-    id 'java'
+    id("java")
 }
 
 dependencies {
-    implementation 'com.google.dagger:hilt-core:2.31.2-alpha'
-    annotationProcessor 'com.google.dagger:hilt-compiler:2.31.2-alpha'
+    implementation("com.google.dagger:hilt-core:2.31.2-alpha")
+    annotationProcessor("com.google.dagger:hilt-compiler:2.31.2-alpha")
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
 }

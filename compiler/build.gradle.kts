@@ -15,15 +15,14 @@
  */
 
 plugins {
-    id 'kotlin'
-    id 'kotlin-kapt'
+    id("kotlin")
+    id("kotlin-kapt")
 }
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib"
-    implementation 'com.squareup:javapoet:1.13.0'
-    compileOnly 'com.google.auto.service:auto-service-annotations:1.0-rc7'
-    kapt 'com.google.auto.service:auto-service:1.0-rc7'
-    compileOnly "net.ltgt.gradle.incap:incap:0.2"
-    kapt "net.ltgt.gradle.incap:incap-processor:0.2"
+    implementation("com.squareup:javapoet:1.13.0")
+    compileOnly("com.google.auto.service:auto-service-annotations:1.0-rc7")
+    kapt("com.google.auto.service:auto-service:1.0-rc7")
+    compileOnly("net.ltgt.gradle.incap:incap:0.2")
+    kapt("net.ltgt.gradle.incap:incap-processor:0.2")
 }
