@@ -15,10 +15,18 @@
  */
 
 plugins {
-    id 'java'
+    id("kotlin")
+    id("kotlin-kapt")
+    publish
 }
 
+group = checkNotNull(properties["libGroup"]?.toString())
+version = checkNotNull(properties["libVersion"]?.toString())
+
 dependencies {
-    implementation 'com.google.dagger:hilt-core:2.31.2-alpha'
-    annotationProcessor 'com.google.dagger:hilt-compiler:2.31.2-alpha'
+    implementation(libs.javapoet)
+    compileOnly(libs.auto.service.annotations)
+    kapt(libs.auto.service.compiler)
+    compileOnly(libs.incap.core)
+    kapt(libs.incap.compiler)
 }
